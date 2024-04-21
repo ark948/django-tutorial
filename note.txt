@@ -4,4 +4,22 @@ git init
 type nul > .gitignore
 add /venv to .gitignore
 pip freeze > requirements.txt
-cmd> django
+cmd> django-admin startproject mysite
+git add .
+git commit -m "first commit"
+cd mysite
+cmd> python manage.py runserver
+cmd> python manage.py startapp polls
+git add .
+git commit -m "Added polls app"
+- add urls.py to polls
+- add first view to polls.views.py
+- include it in polls.urls.py
+- include polls.urls.py in mysite.urls.py
+- edit timezone to your timezone in mysite/settings.py
+python manage.py migrate (runs initial migration)
+- add first models to polls app
+- add polls to installed apps in settings.py
+- python manage.py makemigrations polls
+- python manage.py check
+- python manage.py migrate
