@@ -1,0 +1,7 @@
+python -m venv venv
+venv\Scripts\activate
+git init
+type nul > .gitignore
+add /venv to .gitignore
+pip freeze > requirements.txt
+cmd> django
