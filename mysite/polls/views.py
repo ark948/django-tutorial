@@ -4,5 +4,6 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+# first argument is HttpRequest
 def index(request):
-    return HttpResponse("Hello world, from poll.")
+    return HttpResponse("صفحه اول polls.")
