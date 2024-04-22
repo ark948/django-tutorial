@@ -25,3 +25,4 @@ python manage.py migrate (runs initial migration)
 - python manage.py migrate
 - python manage.py shell
 - python manage.py createsuperuser
+admin-amdin@example.com-123
