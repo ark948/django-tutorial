@@ -26,3 +26,5 @@ python manage.py migrate (runs initial migration)
 - python manage.py shell
 - python manage.py createsuperuser
 admin-amdin@example.com-123
+- registered Question model in polls/admin.py file
+- added templates directory to polls app
