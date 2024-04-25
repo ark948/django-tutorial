@@ -20,3 +20,6 @@ done - (but i'm keeping base.html outside inner main folder)
 5. Time for user authentication and management
 (since django comes with a user management and autorization system...)
 (i won't make an auth app. just use it in main app)
+
+FINAL UPDATE: I have decided to make another practice project and leave this one as is.
+this is a tutorial project and should be kept like that as a reference.
