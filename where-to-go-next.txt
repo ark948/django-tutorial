@@ -1,0 +1,7 @@
+so the tutorial is over. and now i'm going to further improve this project.
+and once ready start a new one.
+
+here i will list features and fixes i will try to implement.
+
+1. first page shows nothing. How to make polls' index page, the only index page?
+(reconsidering, i will add a main app, just like flask)

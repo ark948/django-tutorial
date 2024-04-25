@@ -28,3 +28,8 @@ python manage.py migrate (runs initial migration)
 admin-amdin@example.com-123
 - registered Question model in polls/admin.py file
 - added templates directory to polls app
+
+- for problems with packages:
+1. check docs, troubleshooting page, and FAQ
+2. check package's issue tracker on github
+3. other options: django forum, django discord, django IRC channel on libera.chat
