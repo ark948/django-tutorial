@@ -1,0 +1,24 @@
+venv>pip install django-debug-toolbar
+
+(does not support async views)
+
+1. check if 'django.contrib.staticfiles' is in INSTALLED_APPS setting. (done)
+2. and it is configured properly (if STATIC_URL exists probably enough) (done)
+
+3. ensure TEMPLATES setting contains DjangoTemplates backend whose APP_DIRS option is set to True (done)
+
+4. Add "debug_toolbar" to INSTALLED_APPS.(done)
+(i added it as the last in the list)
+
+5. Add urls to project's URLConf (done)
+
+6. Add the middleware (in MIDDLEWARE setting) (done)
+(the order of middleware is important, should come as early as possible, but after any middleware)
+(that encodes response's content, such as GZipMiddleware)
+
+7. Configure Internal IPs(done)
+(if using docker, will need further confguration)
+
+(install was successful, debug toolbar does show up in index page, but not in polls app index page)
+(let's add it to polls urls as well.)
+(no, still not showing)
