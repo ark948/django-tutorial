@@ -6,4 +6,5 @@ app_name = "main"
 urlpatterns = [
     path("", views.index, name="index"),
     path("main/", views.index, name="index"),
+    path("main/login", views.login_view, name="login"),
 ]

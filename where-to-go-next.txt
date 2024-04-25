@@ -12,3 +12,11 @@ How to keep them both? is it even necessary? let's just try.
 
 2. How to use inheritance in django template system?
 done - (but i'm keeping base.html outside inner main folder)
+
+3. Added static to main
+
+4. Add a link from main homepage to polls app. (done)
+
+5. Time for user authentication and management
+(since django comes with a user management and autorization system...)
+(i won't make an auth app. just use it in main app)
