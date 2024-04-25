@@ -1,8 +1,11 @@
+from typing import Any
 from django.db.models import F
+from django.db.models.query import QuerySet
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
+from django.utils import timezone
 
 from polls.models import Question, Choice
 
@@ -13,8 +16,10 @@ class IndexView(generic.ListView):
     context_object_name = "latest_question_list"
 
     def get_queryset(self):
-        """Return the last five published questions."""
-        return Question.objects.order_by("-pub_date")[:5]
+        """Return the last five published questions (not including those set in future)."""
+        # lte -> less than or eqaul to
+        # return questions whose pub_date is less than or eqaul to right now.
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
     
 
 class DetailView(generic.DetailView):
@@ -22,6 +27,11 @@ class DetailView(generic.DetailView):
     model = Question
     # by default, DetailView will look for <model_name>_detail.html template
     template_name = "polls/detail.html"
+
+    def get_queryset(self):
+        """Exclude any questions that aren't published yet."""
+        # return only questions that are less or equal than current time
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 class ResultsView(generic.DetailView):
     model = Question
