@@ -5,3 +5,10 @@ here i will list features and fixes i will try to implement.
 
 1. first page shows nothing. How to make polls' index page, the only index page?
 (reconsidering, i will add a main app, just like flask)
+- successfully added main app. now trying to use it as the main index page.
+- successfully added main app as main index but now http://127.0.0.1:8000/main/ returns not found.
+How to keep them both? is it even necessary? let's just try.
+- successfully kept them both.
+
+2. How to use inheritance in django template system?
+done - (but i'm keeping base.html outside inner main folder)

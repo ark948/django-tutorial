@@ -1,0 +1,8 @@
+1. adding an app:
+> python manage.py startapp <appname>
+> adding a urls.py file to app's directory
+> add templates directory, and <appname> directory whitin in (namespacing)
+> add first view
+> register the first view in apps.urls.py
+> add the apps.urls.py to project's.urls.py
+> install the app by adding it to installed_apps
